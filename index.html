@@ -11,7 +11,8 @@
 </head>
 <body>
     <section class="sky"></section>
-    <section class="land"></section>
+    <picture class="land"></picture>
+    <picture class="sun"></picture>
     <div class="wrapper">
         <div class="content">
             <section class="intro">
@@ -21,7 +22,7 @@
                 <h1>Service Worker Case Study</h1>
                 <h2>Simple Progressive Web App</h2>
                 <p>This app uses Service Worker and NodeJS.
-                    The goal is to show example usage of SW in real life.
+                    The goal is to show example usage of SW in real life app.
                 </p>
                 <p>Features included:</p>
                 <ul>
@@ -33,7 +34,7 @@
             <section class="app">
                 <div class="app__number">
                     <p class="tooltip">From now your lucky number is:</p>
-                    <h1 class="lucky-number">5</h1>
+                    <h1 class="lucky-number">?</h1>
                     <p class="tooltip">Your old lucky numbers:</p>
                     <h2>3, 7, 1</h2>
                 </div>
@@ -58,10 +59,28 @@
                 </div>
             </section>
             <section class="references">
+                <h2>Useful resources about Service Workers:</h2>
+                <div class="references__links">
+                    <div class="flex">
+                        <div class="references__github"></div>
+                        <a href="https://github.com/bartcis/Service-Worker" target="_blank">Github repo of this app.</a>
+                    </div>
+                    <a href="https://jakearchibald.github.io/isserviceworkerready/" target="_blank">https://jakearchibald.github.io/</a>
+                    <a href="https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/" target="_blank">https://developers.google.com/web/</a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API" target="_blank">https://developer.mozilla.org/en-US/</a>
+                    <a href="https://blog.sessionstack.com/how-javascript-works-the-mechanics-of-web-push-notifications-290176c5c55d" target="_blank">https://blog.sessionstack.com/</a>
+                    <a href="https://thecodebarbarian.com/sending-web-push-notifications-from-node-js.html" target="_blank">https://thecodebarbarian.com/</a>
 
+                    <h3>Sources in Polish :</h3>
+                    <a href="https://bedekodzic.pl/tag/pwa/" target="_blank">https://bedekodzic.pl/tag/pwa/</a>
+                </div>
             </section>
         </div>
     </div>
+    <p class="blog-link">
+        Handcrafted by 
+        <a href="https://bedekodzic.pl/" target="_blank">bedekodzic.pl</a>
+    </p>
     <script src="main.bundle.js"></script>
 </body>
 </html>

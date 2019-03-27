@@ -39,7 +39,7 @@ body {
   position: relative;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
   color: $white;
   font-family: 'rubikbold';
   font-size: 2rem;
@@ -51,9 +51,24 @@ h2 {
   font-size: 1.5rem;
 }
 
-p {
+h3 {
+  color: $black;
+  font-size: 1.25rem;
+}
+
+p, a {
   font-family: 'varelaregular';
   font-size: 1rem;
+}
+
+a {
+  padding: .25rem 0;
+  text-decoration: none;
+  transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: $blue-dark;
+  &:hover {
+    color: $blue;
+  }
 }
 
 .sky {
@@ -63,7 +78,17 @@ p {
   width: 100vw;
   height: 60vh;
   background: linear-gradient($blue-dark, $blue-light);
+  z-index: -3;
+}
+
+.sun {
+  background-image: url('../images/sun.svg');
+  position: absolute;
+  width: 100px;
+  height: 100px;
   z-index: -2;
+  top: 30px;
+  right: 60px;
 }
 
 .lucky-number {
@@ -71,6 +96,12 @@ p {
   background: -webkit-linear-gradient($yellow, $red);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.blog-link {
+  color: $black;
+  float: right;
+  margin: 1rem 2rem;
 }
 
 .button {
@@ -173,5 +204,21 @@ p {
       border-radius: 5px;
       margin: 2rem 0 1rem; 
     }
+  }
+}
+
+.references {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  &__links {
+    text-align: left;
+  }
+  h2 {
+    color: $black;
+  }
+  a {
+    display: block;
+    max-width: 100%;
   }
 }
