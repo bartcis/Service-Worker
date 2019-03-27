@@ -1,3 +1,177 @@
-h1 {
-    color: red;
+/* Web Fonts */
+
+@font-face {
+  font-family: 'rubikbold';
+  src: url('./fonts/rubik-bold-webfont.woff2') format('woff2'),
+    url('./fonts/rubik-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'varelaregular';
+  src: url('./fonts/varela-regular-webfont.woff2') format('woff2'),
+    url('./fonts/varela-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Colors */
+
+$white: #fff;
+$black: #2c3030;
+$grey: #fdfdfd;
+$grey-dark: #d7d9de;
+$blue: #3a78ff;
+$blue-light: #3abaff;
+$blue-dark: #0755ff;
+$red: #f95116;
+$yellow: #f9c216;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $grey;
+  position: relative;
+}
+
+h1, h2, p {
+  color: $white;
+  font-family: 'rubikbold';
+  font-size: 2rem;
+  padding: .5rem 0;
+
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: 'varelaregular';
+  font-size: 1rem;
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60vh;
+  background: linear-gradient($blue-dark, $blue-light);
+  z-index: -2;
+}
+
+.lucky-number {
+  font-size: 8rem;
+  background: -webkit-linear-gradient($yellow, $red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button {
+  width: 94%;
+  border: 1px solid $blue;
+  padding: 10px 0;
+  margin: 10px;
+  font-family: 'rubikbold';
+  font-size: 1rem;
+  border-radius: 50vh;
+  background: linear-gradient($white, $white);
+  cursor: pointer;
+  color: $blue;
+  transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  @media (min-width: 600px) {
+    width: 44%;
+  }
+  &:hover {
+    background: linear-gradient($blue-light, $blue-dark);
+    color: $white;
+  }
+  &:active {
+    filter: drop-shadow(10px 3px 4px $blue);
+  }
+  &:focus {
+    outline: none;
+  }
+  &--wide {
+    width: 94%;
+  }
+  &--disabled {
+    pointer-events: none;
+    filter: grayscale(.9);
+  }
+}
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.content {
+  margin: 1rem 0;
+  text-align: center;
+  @media (min-width: 800px) {
+    margin: 2rem 0;
+  }
+}
+
+.intro {
+  max-width: 600px;
+  margin: auto;
+  ul {
+    padding-inline-start: 0;
+    font-family: 'varelaregular';
+    font-size: 1rem;
+    max-width: 150px;
+    margin: auto;
+    color: $white;
+  }
+}
+
+.app {
+  padding: 1rem;
+  margin: 2rem 0;
+  background: rgba($white, .8);
+  border-radius: 30px;
+  box-shadow: 0 0 12px $grey-dark;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @media (min-width: 800px) {
+    margin: 2rem;
+    padding: 2rem;
+    flex-wrap: nowrap;
+  }
+  p, h1, h2 {
+    color: $black;
+  }
+  &__number {
+    width: 100%;
+    @media (min-width: 600px) {
+      width: 50%;
+    }
+    h2 {
+      color: $blue;
+    }
+  }
+  &__push-not {
+    margin-bottom: 2rem;
+    
+  }
+  &__bg-sync {
+    &__input {
+      padding: .75rem 1rem;
+      width: 100%;
+      font-family: 'varelaregular';
+      font-size: 1rem;
+      border: 1px solid $blue;
+      border-radius: 5px;
+      margin: 2rem 0 1rem; 
+    }
+  }
 }
