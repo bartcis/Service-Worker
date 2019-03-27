@@ -10,7 +10,58 @@
     <link rel="manifest" href="/manifest.json">
 </head>
 <body>
-    <h1>ABC</h1>
+    <section class="sky"></section>
+    <section class="land"></section>
+    <div class="wrapper">
+        <div class="content">
+            <section class="intro">
+                <div class="intro__logo">
+                    <a href="" target="_blank"></a>
+                </div>
+                <h1>Service Worker Case Study</h1>
+                <h2>Simple Progressive Web App</h2>
+                <p>This app uses Service Worker and NodeJS.
+                    The goal is to show example usage of SW in real life.
+                </p>
+                <p>Features included:</p>
+                <ul>
+                    <li>Push Notification</li>
+                    <li>Background Sync</li>
+                </ul>
+
+            </section>
+            <section class="app">
+                <div class="app__number">
+                    <p class="tooltip">From now your lucky number is:</p>
+                    <h1 class="lucky-number">5</h1>
+                    <p class="tooltip">Your old lucky numbers:</p>
+                    <h2>3, 7, 1</h2>
+                </div>
+                <div>
+                    <div class="app__push-not">
+                            <p class="tooltip">To find what your lucky number is use Push Notification</p>
+                            <div class="flex">
+                                <button class="button button--disabled">Disable Push Notification</button>
+                                <button class="button">Enable Push Notification</button>
+                            </div>
+                            <button class="button button--wide button--disabled">Trigger Push Notification</button>
+                        </div>
+                        <div class="app__bg-sync">
+                            <p class="tooltip">What is your lucky number?</p>
+                            <form action="/my-handling-form-page" method="post">
+                                <div>
+                                    <input class="app__bg-sync__input" placeholder="Your new lucky number" type="number" id="js-number" name="number">
+                                </div>
+                                <button class="button button--wide" type="submit">Change your destiny!</button>
+                            </form>
+                        </div>
+                </div>
+            </section>
+            <section class="references">
+
+            </section>
+        </div>
+    </div>
     <script src="main.bundle.js"></script>
 </body>
 </html>
