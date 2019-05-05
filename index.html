@@ -6,41 +6,65 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#2196f3">
     <title>Webpack Project</title>
-    <link rel="stylesheet" href="style.bundle.css">
+    <link rel="stylesheet" href="/public/style.bundle.css">
     <link rel="manifest" href="/manifest.json">
 </head>
 <body>
-    <section class="sky"></section>
+    <picture class="sky"></picture>
     <picture class="land"></picture>
     <picture class="sun"></picture>
+    <picture class="background"></picture>
     <div class="wrapper">
         <div class="content">
             <section class="intro">
-                <div class="intro__logo">
-                    <a href="" target="_blank"></a>
-                </div>
                 <h1>Service Worker Case Study</h1>
                 <h2>Simple Progressive Web App</h2>
                 <p>This app uses Service Worker and NodeJS.
-                    The goal is to show example usage of SW in real life app.
+                    It's a simple case study with VanillaJS.
                 </p>
                 <p>Features included:</p>
                 <ul>
                     <li>Push Notification</li>
                     <li>Background Sync</li>
                 </ul>
-
+                <p>Check the <a href="https://github.com/bartcis/Service-Worker" target="_blank">Github Repo</a> 
+                    and follow tooltips to know what it's about.
+                    <span 
+                        content="The idea behid the app is simple. You can send data to a server via Background Synchrinised form
+                        then you can manually trigger push notification and a server comes back with a value coming from your form. The values
+                        are then rendered by your client. No database is used so each browsing context is uniqe!"
+                        class="tooltip">i
+                    </span>
+                </p>
             </section>
             <section class="app">
                 <div class="app__number">
-                    <p class="tooltip">From now your lucky number is:</p>
+                    <p>From now your lucky number is: 
+                        <span 
+                            content="This number comes from the latest Push Notification received from a server"
+                            class="tooltip">i
+                        </span>
+                    </p>
                     <h1 class="lucky-number">?</h1>
-                    <p class="tooltip">Your old lucky numbers:</p>
+                    <p>Your old lucky numbers:
+                        <span 
+                            content="Those numbers are all previous notifications received from a server"
+                            class="tooltip">i
+                        </span>
+                    </p>
                     <h2>3, 7, 1</h2>
                 </div>
                 <div>
                     <div class="app__push-not">
-                            <p class="tooltip">To find what your lucky number is use Push Notification</p>
+                            <p>
+                                To find what your lucky number is use Push Notification.
+                                <span 
+                                    content="Buttons Enable/Disable turns on/off Push Notifications in your browser.
+                                    When you trigger a notification a server sends to your client latest value you subbmited via the form.
+                                    If you haven't done that yet your lucky number is... 0 :)"
+                                    class="tooltip">i
+                                </span>
+                            </p>
                             <div class="flex">
                                 <button class="button button--disabled">Disable Push Notification</button>
                                 <button class="button">Enable Push Notification</button>
@@ -48,7 +72,14 @@
                             <button class="button button--wide button--disabled">Trigger Push Notification</button>
                         </div>
                         <div class="app__bg-sync">
-                            <p class="tooltip">What is your lucky number?</p>
+                            <p>
+                                What is your lucky number?
+                                <span 
+                                    content="This simple form uses Background Sync. The data you submit goes to IndexedDB and is send 
+                                    to a server when user is back online."
+                                    class="tooltip">i
+                                </span>
+                            </p>
                             <form action="/my-handling-form-page" method="post">
                                 <div>
                                     <input class="app__bg-sync__input" placeholder="Your new lucky number" type="number" id="js-number" name="number">
@@ -61,10 +92,6 @@
             <section class="references">
                 <h2>Useful resources about Service Workers:</h2>
                 <div class="references__links">
-                    <div class="flex">
-                        <div class="references__github"></div>
-                        <a href="https://github.com/bartcis/Service-Worker" target="_blank">Github repo of this app.</a>
-                    </div>
                     <a href="https://jakearchibald.github.io/isserviceworkerready/" target="_blank">https://jakearchibald.github.io/</a>
                     <a href="https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/" target="_blank">https://developers.google.com/web/</a>
                     <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API" target="_blank">https://developer.mozilla.org/en-US/</a>
@@ -81,6 +108,6 @@
         Handcrafted by 
         <a href="https://bedekodzic.pl/" target="_blank">bedekodzic.pl</a>
     </p>
-    <script src="main.bundle.js"></script>
+    <script src="/public/main.bundle.js"></script>
 </body>
 </html>

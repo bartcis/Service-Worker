@@ -31,6 +31,10 @@
     "whatwg-fetch": "2.0.4"
   },
   "dependencies": {
-    "requirejs": "^2.3.6"
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "pug": "^2.0.3"
   }
 }

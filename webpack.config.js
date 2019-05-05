@@ -6,19 +6,18 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: [ 
+  entry: [
     'babel-polyfill',
     'whatwg-fetch',
-    './js/main.js' 
+    './js/main.js'
   ],
   output: {
     path: path.resolve(__dirname, ''),
-    filename: 'main.bundle.js'
+    filename: './public/main.bundle.js'
   },
   target: 'node',
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -27,23 +26,24 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [ 'style-loader', 
-        MiniCssExtractPlugin.loader, 
-        {
-          loader: 'css-loader',
-          options: {
-            url: false,
+        use: ['style-loader',
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              url: false,
+            },
           },
-        },
-        'postcss-loader',
-        'sass-loader']
+          'postcss-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
   plugins: [
-    new CleanWebpackPlugin('dist', {} ),
+    new CleanWebpackPlugin('dist', {}),
     new MiniCssExtractPlugin({
-      filename: 'style.bundle.css',
+      filename: './public/style.bundle.css',
     })
   ]
 };
