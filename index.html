@@ -45,31 +45,26 @@
                             class="tooltip">i
                         </span>
                     </p>
-                    <h1 class="lucky-number">?</h1>
+                    <h1 class="lucky-number">0</h1>
                     <p>Your old lucky numbers:
                         <span 
-                            content="Those numbers are all previous notifications received from a server"
+                            content="Those numbers are 5 previous notifications received from a server"
                             class="tooltip">i
                         </span>
                     </p>
-                    <h2>3, 7, 1</h2>
+                    <h2 class="old-numbers">no numbers yet...</h2>
                 </div>
                 <div>
                     <div class="app__push-not">
                             <p>
                                 To find what your lucky number is use Push Notification.
                                 <span 
-                                    content="Buttons Enable/Disable turns on/off Push Notifications in your browser.
-                                    When you trigger a notification a server sends to your client latest value you subbmited via the form.
+                                    content="When you trigger a notification a server sends to your client latest value you subbmited via the form.
                                     If you haven't done that yet your lucky number is... 0 :)"
                                     class="tooltip">i
                                 </span>
                             </p>
-                            <div class="flex">
-                                <button class="button button--disabled">Disable Push Notification</button>
-                                <button class="button">Enable Push Notification</button>
-                            </div>
-                            <button class="button button--wide button--disabled">Trigger Push Notification</button>
+                            <button class="button button--wide button--disabled" id="js--trigger-button">Trigger Push Notification</button>
                         </div>
                         <div class="app__bg-sync">
                             <p>
@@ -82,9 +77,9 @@
                             </p>
                             <form action="/my-handling-form-page" method="post">
                                 <div>
-                                    <input class="app__bg-sync__input" placeholder="Your new lucky number" type="number" id="js-number" name="number">
+                                    <input class="app__bg-sync__input" placeholder="Your new lucky number" type="number" id="js--number" name="number">
                                 </div>
-                                <button class="button button--wide" type="submit">Change your destiny!</button>
+                                <button class="button button--wide" id="js--form" type="submit">Change your destiny!</button>
                             </form>
                         </div>
                 </div>
